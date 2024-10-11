@@ -61,6 +61,16 @@ public:
         return ComplexNumber(this->real, -1.0*this->imag);
     }
 
+    // Negate both real and imaginary part
+    void negate(){
+        this->real *= -1.0;
+        this->imag *= -1.0;
+    }
+
+    ComplexNumber negated(){
+        return ComplexNumber(-1.0*this->real, -1.0*this->imag);
+    }
+
     //Add in place
     void add(const ComplexNumber& c) {
         this->real += c.real;
@@ -70,6 +80,15 @@ public:
     //Add
     ComplexNumber addedTo(const ComplexNumber& c) {
         return ComplexNumber(this->real+c.real, this->imag+c.imag);
+    }
+
+    void subtract(const ComplexNumber& c){
+        this->real -= c.real;
+        this->imag -= c.imag;
+    }
+
+    ComplexNumber subtractFrom(const ComplexNumber& c){
+        return ComplexNumber(this->real-c.real, this->imag-c.imag);
     }
     
     //Display
