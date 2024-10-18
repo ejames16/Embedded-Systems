@@ -60,16 +60,19 @@ public:
         double sum = this->getValue() + u;
         this->setValue(sum);
     }
+
     void operator+=(DoubleNumber& u) {
         double sum = this->getValue() + u.getValue();
         this->setValue(sum);
     }
+
     DoubleNumber operator+(DoubleNumber& u) {
         DoubleNumber result;
         result = *this;
         result += u;
         return result;
     }
+
     DoubleNumber& operator=(double u) {
         this->setValue(u);
         return *this;
@@ -85,8 +88,13 @@ public:
     bool operator==(DoubleNumber& u)
     {
         // Return a true if u is equal to `this`
-        // ** TO BE DONE BY THE STUDENT **
+        DoubleNumber& number = *this;
+        if (number.getValue() == u.getValue())
+        {
+            return true;
+        }
         return false;
+        //return (this->_real == u._real) ? true : false;
     }
 
     operator double() {
@@ -95,9 +103,24 @@ public:
 
 };
 
-
+float f;
 int main()
 {
+    float* pf = &f;
+
+    float& ff = f; 
+
+    float r =1.0;
+    pf = &r;
+
+    float y = 3.3;
+
+    ff = y;
+
+
+
+
+
     //Constructor Function overloading 
     DoubleNumber n0(1.0);
     DoubleNumber n1;
@@ -112,6 +135,15 @@ int main()
 
     DoubleNumber sum = (n0 + n1 + n2 + n3);
     cout << sum << endl;
+
+    if (n3 == n2)
+    {
+        cout << "Equal!" << endl;
+    }
+    else{
+        cout << "Not Equal!" << endl;
+  
+    }
 
     while (true) {
 
