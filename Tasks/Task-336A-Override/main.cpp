@@ -26,7 +26,10 @@ int main()
 
     //TODO - write an overloaded + operator
     DoubleNumber sum1 = c0 + c1 + d0 + d1;
+    ComplexNumber sum2 = c0 + c1;
     cout << sum1 << endl;
+    cout << sum2 << endl;
+    
 
     while (true) {
 

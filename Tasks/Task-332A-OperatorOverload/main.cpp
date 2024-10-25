@@ -117,10 +117,6 @@ int main()
 
     ff = y;
 
-
-
-
-
     //Constructor Function overloading 
     DoubleNumber n0(1.0);
     DoubleNumber n1;
