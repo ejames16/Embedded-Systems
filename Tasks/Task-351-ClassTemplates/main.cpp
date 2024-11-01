@@ -10,6 +10,7 @@ AnalogIn pot(AN_POT_PIN);
 
 //Defines an object with a fixed-size internal buffer
 RunningMean<uint16_t, double, 4> buf4;
+RunningMean<uint16_t, double, 64> buf64;
 
 int main()
 {

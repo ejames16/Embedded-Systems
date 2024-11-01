@@ -15,13 +15,13 @@ class MockedLight : public ILightNotify {
         cout << "Mocked Light initialised" << endl;
         state = initialState;
     }
-
+ 
     virtual void lightOn() { 
-        cout << "LIGHT " << ID << "ON" << endl; 
+        cout << "LIGHT " << ID << " ON" << endl; 
         state = true; 
     };
     virtual void lightOff() { 
-        cout << "LIGHT " << ID << "OFF" << endl; 
+        cout << "LIGHT " << ID << " OFF" << endl; 
         state = false; 
     };
     virtual bool lightStatus() { 
